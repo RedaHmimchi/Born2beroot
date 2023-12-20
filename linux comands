@@ -1,0 +1,16 @@
+#linux commands to check your b2br shit
+password rules  : sudo nano /etc/pam.d/common-password
+password days   : sudo nano /etc/login.defs
+check ssh port  : sudo cat /etc/ssh/sshd_config | grep Port #it will be Port 4242
+sudo config     : sudo nano /etc/sudoers
+users info      : sudo nano /etc/passwd
+ssh status      : sudo systemctl status sshd
+ufw status      : sudo systemctl status sshd
+add ufw rule    : sudo ufw allow <rule>
+delete ufw rule : sudo ufw status numbered | sudo ufw delete <rule index>
+change hostname : sudo hostnamectl set-hostname <your-new-hostname>
+see crontab     : crontab -e
+edit crontab    : sudo crontab -u <username> -e
+#in the bonus part they told us to setup a free service of our choice so i used the unattended-upgrades service
+service config  : sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
+
